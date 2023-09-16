@@ -1,0 +1,76 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #ccc;
+}
+
+#container {
+    aspect-ratio: 1/1;
+    box-shadow: 0 0 5vh #aaa;
+    max-width: calc(100vw - 20vh);
+    max-height: 90vh;
+    margin: 5vh auto;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.find_obj {
+    width: var(--sz);
+    height: var(--sz);
+    object-fit: contain;
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    cursor: pointer;
+
+    transition: top 0.1s linear;
+}
+
+.find_obj:hover {
+    top: calc(var(--y) - 3vh);
+}
+
+#countdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    pointer-events: none;
+}
+#countdown>div {
+    text-align: center;
+    color: #333;
+    font: 10vh "arial";
+}
+
+#won {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#won>div {
+    background-color: white;
+    text-align: center;
+    color: #333;
+    font: 10vh "arial";
+    width: 100%;
+    height: 50vh;
+}
+
+#retry {
+    text-decoration: underline;
+    cursor: pointer;
+}
