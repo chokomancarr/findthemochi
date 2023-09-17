@@ -1,0 +1,67 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #ccc;
+}
+
+#container {
+    aspect-ratio: 1/1;
+    box-shadow: 0 0 5vh #aaa;
+    max-width: calc(100vw - 20vh);
+    max-height: 90vh;
+    margin: 5vh auto;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.wack_target {
+    object-fit: contain;
+    cursor: pointer;
+    transform: translateY(20px);
+    transition: transform 0.2s linear;
+}
+
+.wack_target.show {
+    transform: translateY(0);
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#spawns {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #aaa;
+}
+
+#holes {
+    fill: white;
+    cursor: default;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+#ovl_txt {
+    text-align: center;
+    color: #333;
+    font: 5vh "arial";
+}
+#ovl_txt.bold {
+    font-weight: bolder;
+}
