@@ -48,7 +48,6 @@ ${(y > 0) ? `
 
     const infinite = args["infinite"] === "1";
     const MAX_TIME = 60000;
-    const end_t = infinite? -1 : t0 + MAX_TIME;
     
     let bar = document.getElementById("time_bar");
     if (!infinite) bar.style.display = null;
@@ -106,8 +105,9 @@ ${(y > 0) ? `
     await delay(1000);
     ovl.innerText = "SCORE: 0";
     
-    t0= performance.now();
+    t0 = performance.now();
     let spawn_t = t0 + 1000;
+    const end_t = infinite? -1 : t0 + MAX_TIME;
 
     function loop(t) {
         let dt = t - t0;
